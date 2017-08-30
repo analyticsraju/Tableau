@@ -1,8 +1,0 @@
-eno,loc,country
-10,hyd,india
-11,bang,india
-12,mum,india
-13,newyork,usa
-14,beijing,china
-15,singapr,singapr
-17,london,UK

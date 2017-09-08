@@ -1,0 +1,1139 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0728.2252                               -->
+<workbook original-version='10.3' source-build='10.3.2 (10300.17.0728.2252)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='empAddr' inline='true' name='federated.15r88tz0xsc0yu1g1v47d1vny0hk' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='empAddr' name='textscan.0ftappx05bbhd01eaijju1swesbj'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empAddr.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ftappx05bbhd01eaijju1swesbj' name='empAddr.txt' table='[empAddr#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='eno' ordinal='0' />
+            <column datatype='string' name='loc' ordinal='1' />
+            <column datatype='string' name='country' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[loc]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>loc</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Eno' datatype='integer' name='[eno]' role='measure' type='quantitative' />
+      <column caption='Loc' datatype='string' name='[loc]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.45625' measure-ordering='alphabetic' measure-percentage='0.54375' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='empData (2)' inline='true' name='federated.05w8yze0y1gnow17zduo51ybk3fv' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='empData' name='textscan.0955js815m5u6v10rsubh00dfg2b'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empData.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0955js815m5u6v10rsubh00dfg2b' name='empData.txt' table='[empData#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='eno' ordinal='0' />
+            <column datatype='string' name='ename' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ename</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ename]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>ename</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Ename' datatype='string' name='[ename]' role='dimension' type='nominal' />
+      <column caption='Eno' datatype='integer' name='[eno]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.477124' measure-ordering='alphabetic' measure-percentage='0.522876' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='empAddr+' inline='true' name='federated.19djs4e0gnhm1c141o0iv1inf2gd' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='empAddr' name='textscan.1v1w4pi0yj7s1v14g92ww08upmzq'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empAddr.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <relation connection='textscan.1v1w4pi0yj7s1v14g92ww08upmzq' name='empAddr.txt' table='[empAddr#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='eno' ordinal='0' />
+              <column datatype='string' name='loc' ordinal='1' />
+              <column datatype='string' name='country' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1v1w4pi0yj7s1v14g92ww08upmzq' name='empAddr.txt1' table='[empAddr#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='eno' ordinal='0' />
+              <column datatype='string' name='loc' ordinal='1' />
+              <column datatype='string' name='country' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[country (empAddr.txt1)]' value='[empAddr.txt1].[country]' />
+          <map key='[country]' value='[empAddr.txt].[country]' />
+          <map key='[eno (empAddr.txt1)]' value='[empAddr.txt1].[eno]' />
+          <map key='[eno]' value='[empAddr.txt].[eno]' />
+          <map key='[loc (empAddr.txt1)]' value='[empAddr.txt1].[loc]' />
+          <map key='[loc]' value='[empAddr.txt].[loc]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[loc]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>loc</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno (empAddr.txt1)]</local-name>
+            <parent-name>[empAddr.txt1]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[loc (empAddr.txt1)]</local-name>
+            <parent-name>[empAddr.txt1]</parent-name>
+            <remote-alias>loc</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country (empAddr.txt1)]</local-name>
+            <parent-name>[empAddr.txt1]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empAddr.txt1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[country (empAddr.txt1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Eno' datatype='integer' name='[eno]' role='measure' type='quantitative' />
+      <column caption='Loc' datatype='string' name='[loc]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.477124' measure-ordering='alphabetic' measure-percentage='0.522876' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='empData' inline='true' name='federated.1weh0f70m501td1h034fc1is1dj0' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='empAddr' name='textscan.022w0mp0j1vkm518n00md0yzhik9'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empAddr.txt' password='' server='' />
+          </named-connection>
+          <named-connection caption='empData' name='textscan.01c2m6x0kxxbx5137iqy00a65n8h'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empData.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[empAddr.txt].[eno]' />
+              <expression op='[empData.txt].[eno]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.022w0mp0j1vkm518n00md0yzhik9' name='empAddr.txt' table='[empAddr#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='eno' ordinal='0' />
+              <column datatype='string' name='loc' ordinal='1' />
+              <column datatype='string' name='country' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.01c2m6x0kxxbx5137iqy00a65n8h' name='empData.txt' table='[empData#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='eno' ordinal='0' />
+              <column datatype='string' name='ename' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[country]' value='[empAddr.txt].[country]' />
+          <map key='[ename]' value='[empData.txt].[ename]' />
+          <map key='[eno (empData.txt)]' value='[empData.txt].[eno]' />
+          <map key='[eno]' value='[empAddr.txt].[eno]' />
+          <map key='[loc]' value='[empAddr.txt].[loc]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[loc]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>loc</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empAddr.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno (empData.txt)]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ename</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ename]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>ename</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Ename' datatype='string' name='[ename]' role='dimension' type='nominal' />
+      <column caption='Eno' datatype='integer' name='[eno]' role='measure' type='quantitative' />
+      <column caption='Loc' datatype='string' name='[loc]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.452055' measure-ordering='alphabetic' measure-percentage='0.547945' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='empData (3)' inline='true' name='federated.04hxc3v1xm5xo41a0lr7m16725dj' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='empData' name='textscan.1q2ghdt18x3bji13bsg3d0kq6ort'>
+            <connection class='textscan' directory='D:/Data/DataScience/Tableau' filename='empData.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1q2ghdt18x3bji13bsg3d0kq6ort' name='empData.txt' table='[empData#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='eno' ordinal='0' />
+            <column datatype='string' name='ename' ordinal='1' />
+            <column datatype='date' name='orderDate' ordinal='2' />
+            <column datatype='date' name='shipDate' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>eno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eno]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>eno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ename</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ename]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>ename</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orderDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[orderDate]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>orderDate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shipDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[shipDate]</local-name>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias>shipDate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[empData.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_300615319870406658]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;, [orderDate],[shipDate])' />
+      </column>
+      <column caption='dateDiff' datatype='integer' name='[Calculation_300615319871746052]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[orderDate],[shipDate],&apos;sunday&apos; )' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Ename' datatype='string' name='[ename]' role='dimension' type='nominal' />
+      <column caption='Eno' datatype='integer' name='[eno]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.477169' measure-ordering='alphabetic' measure-percentage='0.522831' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='empData' name='federated.1weh0f70m501td1h034fc1is1dj0' />
+            <datasource caption='empData (3)' name='federated.04hxc3v1xm5xo41a0lr7m16725dj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04hxc3v1xm5xo41a0lr7m16725dj'>
+            <column caption='Calculation1' datatype='integer' name='[Calculation_300615319870406658]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;, [orderDate],[shipDate])' />
+            </column>
+            <column caption='dateDiff' datatype='integer' name='[Calculation_300615319871746052]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,[orderDate],[shipDate],&apos;sunday&apos; )' />
+            </column>
+            <column-instance column='[Calculation_300615319870406658]' derivation='Sum' name='[diff:sum:Calculation_300615319870406658:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='Difference'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[orderDate]' derivation='Month' name='[mn:orderDate:ok]' pivot='key' type='ordinal' />
+            <column datatype='date' name='[orderDate]' role='dimension' type='ordinal' />
+            <column-instance column='[shipDate]' derivation='Quarter' name='[qr:shipDate:ok]' pivot='key' type='ordinal' />
+            <column datatype='date' name='[shipDate]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_300615319871746052]' derivation='Sum' name='[sum:Calculation_300615319871746052:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[shipDate]' derivation='Year' name='[yr:shipDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1weh0f70m501td1h034fc1is1dj0'>
+            <column caption='Ename - Split 1' datatype='string' name='[Calculation_300615319867875328]' role='dimension' type='nominal' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='//Ename - Split 1&#10;TRIM( SPLIT( [ename], &quot; &quot;, 1 ) )' />
+            </column>
+            <column caption='Ename - Split 2' datatype='string' name='[Calculation_300615319867875329]' role='dimension' type='nominal' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='//Ename - Split 2&#10;TRIM( SPLIT( [ename], &quot; &quot;, 2 ) )' />
+            </column>
+            <column caption='Ename' datatype='string' name='[ename]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1weh0f70m501td1h034fc1is1dj0].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.04hxc3v1xm5xo41a0lr7m16725dj].[diff:sum:Calculation_300615319870406658:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.04hxc3v1xm5xo41a0lr7m16725dj].[sum:Calculation_300615319871746052:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1weh0f70m501td1h034fc1is1dj0].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1weh0f70m501td1h034fc1is1dj0].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1weh0f70m501td1h034fc1is1dj0].[Calculation_300615319867875328] / ([federated.1weh0f70m501td1h034fc1is1dj0].[Calculation_300615319867875329] / [federated.1weh0f70m501td1h034fc1is1dj0].[:Measure Names]))</rows>
+        <cols>([federated.04hxc3v1xm5xo41a0lr7m16725dj].[mn:orderDate:ok] / ([federated.04hxc3v1xm5xo41a0lr7m16725dj].[yr:shipDate:ok] / [federated.04hxc3v1xm5xo41a0lr7m16725dj].[qr:shipDate:ok]))</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='114'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1weh0f70m501td1h034fc1is1dj0].[Calculation_300615319867875328]</field>
+            <field>[federated.1weh0f70m501td1h034fc1is1dj0].[Calculation_300615319867875329]</field>
+            <field>[federated.1weh0f70m501td1h034fc1is1dj0].[none:F2:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
